@@ -1,0 +1,50 @@
+    \ProvidesPackage{beamerthemePegasusUCF}[]
+     
+\mode<presentation>
+%%%ALEX 1inner \ 2outer \ color \ font
+\usepackage{color}
+
+%%%%%COLOR
+\definecolor{ucfGold}{RGB}{255, 202, 6}
+\definecolor{ucfGoldHalf}{RGB}{127, 101, 3}
+\definecolor{ucfGoldQuarter}{RGB}{64, 51, 2}
+\definecolor{ucfBlack}{RGB}{0, 0, 0}
+\definecolor{ucfBlackHalf}{RGB}{127, 127, 127}
+\definecolor{ucfBlackQuarter}{RGB}{64, 64, 64}
+
+%gold components
+\setbeamercolor{framesubtitle}{fg=ucfGold}
+\setbeamercolor{alerted text}{fg=ucfGold}
+\setbeamercolor{example text}{fg=ucfGold}
+\setbeamercolor{structure}{fg=ucfGold}
+\setbeamercolor{item}{fg = ucfGold}
+\setbeamercolor{subitem}{fg = ucfGoldHalf}
+\setbeamercolor{subsubitem}{fg = ucfGoldQuarter}
+\setbeamercolor{description item}{fg = ucfGoldHalf}
+\setbeamercolor{author}{fg=ucfGold}
+\setbeamercolor{date}{fg=ucfGold}
+%black components
+\setbeamercolor{frametitle}{fg = ucfBlack}
+\setbeamercolor{title}{fg = ucfBlack}
+\setbeamercolor{section in toc}{fg = ucfBlack}
+\setbeamercolor{section in toc shaded}{fg = ucfBlackQuarter}
+\setbeamercolor{normal text}{fg= ucfBlack}
+\setbeamercolor{caption}{fg = ucfBlack}
+\setbeamercolor{caption name}{fg = ucfBlack}
+
+%%%%INNER
+% Standard block
+\setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
+\setbeamercolor{block body}{bg = ucfBlackHalf}
+% Alert block
+\setbeamercolor{block title alerted}{bg = ucfGoldQuarter}
+\setbeamercolor{block body alerted}{bg = ucfGoldHalf}
+% Example block
+\setbeamercolor{block title example}{bg = ucfGoldHalf}
+\setbeamercolor{block body example}{bg = ucfGoldQuarter}
+
+
+
+
+          
+\mode<all>
