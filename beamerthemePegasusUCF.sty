@@ -5,12 +5,15 @@
 \usepackage{color}
 
 %%%%%COLOR
+%golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
-\definecolor{ucfGoldHalf}{RGB}{127, 101, 3}
-\definecolor{ucfGoldQuarter}{RGB}{64, 51, 2}
+\definecolor{ucfGoldHalf}{RGB}{127, 229, 131}
+\definecolor{ucfGoldQuarter}{RGB}{64, 242, 193}
+%blacks
 \definecolor{ucfBlack}{RGB}{0, 0, 0}
 \definecolor{ucfBlackHalf}{RGB}{127, 127, 127}
-\definecolor{ucfBlackQuarter}{RGB}{64, 64, 64}
+\definecolor{ucfBlackQuarter}{RGB}{191, 191, 191}
+
 
 %gold components
 \setbeamercolor{framesubtitle}{fg=ucfGold}
@@ -32,10 +35,17 @@
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
 
+%%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
+\usefonttheme{professionalfonts}
+\usefonttheme{serif} % default family is serif
+%\usepackage{fontspec}
+%\setmainfont{Liberation Serif}
+
+
 %%%%INNER
 % Standard block
 \setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
-\setbeamercolor{block body}{bg = ucfBlackHalf}
+\setbeamercolor{block body}{bg = ucfBlackQuarter}
 % Alert block
 \setbeamercolor{block title alerted}{bg = ucfGoldQuarter}
 \setbeamercolor{block body alerted}{bg = ucfGoldHalf}
@@ -43,7 +53,14 @@
 \setbeamercolor{block title example}{bg = ucfGoldHalf}
 \setbeamercolor{block body example}{bg = ucfGoldQuarter}
 
+%Overall aesthetic of inner components
+\useinnertheme{rounded}
 
+
+%%%%%OUTER
+\setbeamertemplate{ canvas right}{
+  \vspace*{3pt}\hspace*{2pt}%
+  {\includegraphics[height=28pt]{UCFLOGO}}}
 
 
           
