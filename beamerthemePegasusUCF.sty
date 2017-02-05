@@ -33,7 +33,7 @@
 \setbeamercolor{title}{fg = ucfGold}
 \setbeamercolor{section in toc}{fg = ucfBlack}
 \setbeamercolor{section in toc shaded}{fg = ucfBlackQuarter}
-\setbeamercolor{normal text}{fg= ucfGold}
+\setbeamercolor{normal text}{fg= ucfBlack}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
 
@@ -63,13 +63,20 @@
 %bg color
 \setbeamercolor{background canvas}{bg=whiteSlight}
 
-
+\setbeamertemplate{headline}{
+  \hfill
+  \includegraphics[width=1cm]{UCFLOGO1}
+  \hspace*{0.0cm}
+  \vskip0pt
+  {\color{ucfBlack}\rule{\textwidth}{0.4mm}}
+}
 \setbeamertemplate{frametitle}
 {\vskip 0.25pt
   \leavevmode
   \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
-    \raggedright\hspace*{2em}\Large\insertframetitle
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
+     \insertsection\insertsubsection\\
+    \raggedright\hspace*{5em}\Large\insertframetitle 
   \end{beamercolorbox}
   }%
 }
