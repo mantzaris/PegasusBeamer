@@ -8,11 +8,13 @@
 %golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
 \definecolor{ucfGoldHalf}{RGB}{127, 229, 131}
-\definecolor{ucfGoldQuarter}{RGB}{64, 242, 193}
+\definecolor{ucfGoldQuarter}{RGB}{254, 242, 193}
 %blacks
 \definecolor{ucfBlack}{RGB}{0, 0, 0}
 \definecolor{ucfBlackHalf}{RGB}{127, 127, 127}
 \definecolor{ucfBlackQuarter}{RGB}{191, 191, 191}
+%White
+\definecolor{whiteSlight}{RGB}{244, 244, 244}
 
 
 %gold components
@@ -28,10 +30,10 @@
 \setbeamercolor{date}{fg=ucfGold}
 %black components
 \setbeamercolor{frametitle}{fg = ucfBlack}
-\setbeamercolor{title}{fg = ucfBlack}
+\setbeamercolor{title}{fg = ucfGold}
 \setbeamercolor{section in toc}{fg = ucfBlack}
 \setbeamercolor{section in toc shaded}{fg = ucfBlackQuarter}
-\setbeamercolor{normal text}{fg= ucfBlack}
+\setbeamercolor{normal text}{fg= ucfGold}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
 
@@ -58,10 +60,30 @@
 
 
 %%%%%OUTER
-\setbeamertemplate{ canvas right}{
-  \vspace*{3pt}\hspace*{2pt}%
-  {\includegraphics[height=28pt]{UCFLOGO}}}
+%bg color
+\setbeamercolor{background canvas}{bg=whiteSlight}
 
 
-          
+\setbeamertemplate{frametitle}
+{\vskip 0.25pt
+  \leavevmode
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
+    \raggedright\hspace*{2em}\Large\insertframetitle
+  \end{beamercolorbox}
+  }%
+}
+
+
+
+
+%%%%MISC
+% We will also remove the navigation symbols, which I personally don't find very useful
+\setbeamertemplate{navigation symbols}{}
+
+
+
+
+
+%%%%%END
 \mode<all>
