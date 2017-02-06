@@ -3,7 +3,8 @@
 \mode<presentation>
 %%%ALEX 1inner \ 2outer \ color \ font
 \usepackage{color}
-
+\usepackage{verbatim}
+\usepackage{tikz}
 %%%%%COLOR
 %golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
@@ -18,24 +19,25 @@
 
 
 %gold components
-\setbeamercolor{framesubtitle}{fg=ucfGold}
-\setbeamercolor{alerted text}{fg=ucfGold}
-\setbeamercolor{example text}{fg=ucfGold}
-\setbeamercolor{structure}{fg=ucfGold}
+\setbeamercolor{framesubtitle}{fg=ucfBlack}
+\setbeamercolor{alerted text}{fg=ucfBlack}
+\setbeamercolor{example text}{fg=ucfBlack}
+\setbeamercolor{structure}{fg=ucfBlack}
 \setbeamercolor{item}{fg = ucfGold}
 \setbeamercolor{subitem}{fg = ucfGoldHalf}
 \setbeamercolor{subsubitem}{fg = ucfGoldQuarter}
-\setbeamercolor{description item}{fg = ucfGoldHalf}
-\setbeamercolor{author}{fg=ucfGold}
-\setbeamercolor{date}{fg=ucfGold}
+\setbeamercolor{description item}{fg = ucfBlack}
+\setbeamercolor{author}{fg=ucfBlack}
+\setbeamercolor{date}{fg=ucfBlack}
 %black components
 \setbeamercolor{frametitle}{fg = ucfBlack}
-\setbeamercolor{title}{fg = ucfGold}
+\setbeamercolor{title}{fg = ucfBlack}
 \setbeamercolor{section in toc}{fg = ucfBlack}
 \setbeamercolor{section in toc shaded}{fg = ucfBlackQuarter}
 \setbeamercolor{normal text}{fg= ucfBlack}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
+
 
 %%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
 \usefonttheme{professionalfonts}
@@ -63,13 +65,13 @@
 %bg color
 \setbeamercolor{background canvas}{bg=whiteSlight}
 
-\setbeamertemplate{headline}{
-  \hfill
-  \includegraphics[width=1cm]{UCFLOGO1}
-  \hspace*{0.0cm}
-  \vskip0pt
-  {\color{ucfBlack}\rule{\textwidth}{0.4mm}}
-}
+
+
+
+
+  
+
+%frametitle
 \setbeamertemplate{frametitle}
 {\vskip 0.25pt
   \leavevmode
@@ -79,7 +81,31 @@
     \raggedright\hspace*{5em}\Large\insertframetitle 
   \end{beamercolorbox}
   }%
+  \vspace{-25pt}
+  \hfill
+  \includegraphics[width=1cm]{UCFLOGO}
+  \hspace*{0.0cm}
+  \vskip0pt
+  %{\color{ucfBlack}\rule{\textwidth}{0.4mm}}
 }
+
+
+%footer
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+  \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
 
 
 
