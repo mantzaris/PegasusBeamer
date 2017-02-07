@@ -91,14 +91,17 @@
 
 
 %footer
+\setbeamercolor{author in head/foot}{bg=ucfBlackQuarter}
+\setbeamercolor{title in head/foot}{bg=ucfBlackQuarter}
+
 \setbeamertemplate{footline}
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1ex,center]{author in head/foot}%
   \usebeamerfont{author in head/foot}\insertshortauthor
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
     \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
     \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}}%
