@@ -73,19 +73,27 @@
 
 %frametitle
 \setbeamertemplate{frametitle}
-{\vskip 0.25pt
+{\vskip -0.8pt
   \leavevmode
   \hbox{%
-    \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex]{frametitle}%
-     \insertsection\insertsubsection\\
-    \raggedright\hspace*{5em}\Large\insertframetitle 
-  \end{beamercolorbox}
+    \includegraphics[width=1cm]{UCFLOGO}
+    \begin{beamercolorbox}[ht=1.8ex,dp=1ex]{frametitle}%
+      \raggedright\hspace*{3em}
+      \Large\insertframetitle
+    \end{beamercolorbox}
+  } 
+  \hbox{%
+    \leavevmode
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex]{fg=ucfBlack,bg=ucfWhite}
+      {\small \insertsection  \insertsubsection}   
+    \end{beamercolorbox}
+
   }%
-  \vspace{-25pt}
-  \hfill
-  \includegraphics[width=1cm]{UCFLOGO}
-  \hspace*{0.0cm}
-  \vskip0pt
+  %\vspace{-25pt}
+  %\hfill
+  %\includegraphics[width=1cm]{UCFLOGO}
+  %\hspace*{0.0cm}
+  %\vskip0pt
   %{\color{ucfBlack}\rule{\textwidth}{0.4mm}}
 }
 
