@@ -4,7 +4,7 @@
 %%%ALEX 1inner \ 2outer \ color \ font
 \usepackage{color}
 \usepackage{verbatim}
-\usepackage{tikz}
+
 %%%%%COLOR
 %golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
@@ -66,40 +66,25 @@
 \setbeamercolor{background canvas}{bg=whiteSlight}
 
 
-
-
-
-  
-
 %frametitle
 \setbeamertemplate{frametitle}
 {\vskip -0.8pt
   \leavevmode
-  \fbox{%logo first
+  \hbox{
     \includegraphics[width=1cm]{tempLOGO}
-    %frame title
-    \begin{beamercolorbox}[wd=0.75\textwidth]{frametitle}    
-      \hspace*{3em}
-      \center
-      \Large\insertframetitle     
-    \end{beamercolorbox}
-    %section names
-    \fbox{%
+    }\hbox{\hspace{0cm}
+    \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.62\textwidth]{frametitle}%\raggedright\hspace*{1em}
+      \vspace{.4cm}\Large\insertframetitle\vrule
+    \end{beamercolorbox}\vrule %\leavevmode
+    \vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny \insertsection  }}
+        \vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny   \insertsection}}
+  } \leavevmode  \vbox{%
     \leavevmode
-    \begin{beamercolorbox}[wd=0.15\textwidth]{fg=ucfBlack,bg=ucfWhite}
-      {\tiny \insertsection }\\
-      {\tiny   \insertsubsection}  
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,wd=2cm]{fg=ucfBlack,bg=ucfWhite}
+      {\small \insertsection  \insertsubsection}   
     \end{beamercolorbox}
-  }%
-}
- 
-  %\fbox{%
-   % \leavevmode
-    %\begin{beamercolorbox}[wd=0.1\textwidth]{fg=ucfBlack,bg=ucfWhite}
-     % {\tiny \insertsection  \insertsubsection}   \hfill
-    %\end{beamercolorbox}
 
-  %}%
+  }%
   %\vspace{-25pt}
   %\hfill
   %\includegraphics[width=1cm]{UCFLOGO}
@@ -107,6 +92,10 @@
   %\vskip0pt
   %{\color{ucfBlack}\rule{\textwidth}{0.4mm}}
 }
+    %\begin{beamercolorbox}[wd=0.15\textwidth,ht=1cm]{fg=ucfBlack,bg=ucfWhite}
+     % {\tiny \insertsection }\\
+     % {\tiny   \insertsubsection}  
+    %\end{beamercolorbox}} 
 
 
 %footer
