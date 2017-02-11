@@ -71,27 +71,29 @@
 {\vskip -0.8pt
   \leavevmode
   \hbox{
-    \includegraphics[width=1cm]{tempLOGO}
+    \includegraphics[width=1cm]{UCFLOGO}
     }\hbox{\hspace{0cm}
-    \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.62\textwidth]{frametitle}%\raggedright\hspace*{1em}
-      \vspace{.4cm}\Large\insertframetitle\vrule
-    \end{beamercolorbox}\vrule %\leavevmode
-    \vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny \insertsection  }}
-        \vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny   \insertsection}}
-  } \leavevmode  \vbox{%
-    \leavevmode
-    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,wd=2cm]{fg=ucfBlack,bg=ucfWhite}
-      {\small \insertsection  \insertsubsection}   
-    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}%\raggedright\hspace*{1em}
+      \vspace{.13cm}\Large\insertframetitle
+    \end{beamercolorbox}%\vrule %\leavevmode
+    %\vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny \insertsection  }}
+     %   \vspace{-1cm}\vbox{\fbox{\vspace{-1cm}\tiny   \insertsection}}
+  }
+  %\leavevmode  \vbox{%
+   % \leavevmode
+    %\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,wd=2cm]{fg=ucfBlack,bg=ucfWhite}
+     % {\small \insertsection  \insertsubsection}   
+    %\end{beamercolorbox}
 
-  }%
+  %}%
+}  
   %\vspace{-25pt}
   %\hfill
   %\includegraphics[width=1cm]{UCFLOGO}
   %\hspace*{0.0cm}
   %\vskip0pt
   %{\color{ucfBlack}\rule{\textwidth}{0.4mm}}
-}
+
     %\begin{beamercolorbox}[wd=0.15\textwidth,ht=1cm]{fg=ucfBlack,bg=ucfWhite}
      % {\tiny \insertsection }\\
      % {\tiny   \insertsubsection}  
@@ -106,16 +108,18 @@
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1ex,center]{author in head/foot}%
-  \usebeamerfont{author in head/foot}\insertshortauthor
+  \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
+   \hspace{.2cm} \usebeamerfont{author in head/foot}\insertshorttitle$\rightarrow$\insertsection $\rightarrow$ \insertsubsection%\insertshortauthor
+    %\hspace{2cm}\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+   \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}
     \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
-  \end{beamercolorbox}}%
-  \vskip0pt%
+  \end{beamercolorbox}%
+ }
 }
-
+}
 
 
 
