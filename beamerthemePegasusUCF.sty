@@ -74,28 +74,24 @@
 %frametitle
 \setbeamertemplate{frametitle}
 {\vskip -0.8pt
-  \leavevmode%\noindent
-  \fbox{%
-    
-    \hspace{-0pt}
-    \includegraphics[width=1cm]{UCFLOGO}
-    
-    \begin{beamercolorbox}[wd=0.75\textwidth]{frametitle}%ht=1.8ex,dp=1ex
-      %\raggedright
+  \leavevmode
+  \fbox{%logo first
+    \includegraphics[width=1cm]{tempLOGO}
+    %frame title
+    \begin{beamercolorbox}[wd=0.75\textwidth]{frametitle}    
       \hspace*{3em}
       \center
       \Large\insertframetitle     
     \end{beamercolorbox}
-    
+    %section names
     \fbox{%
     \leavevmode
     \begin{beamercolorbox}[wd=0.15\textwidth]{fg=ucfBlack,bg=ucfWhite}
       {\tiny \insertsection }\\
       {\tiny   \insertsubsection}  
     \end{beamercolorbox}
-
   }%
-    }
+}
  
   %\fbox{%
    % \leavevmode
