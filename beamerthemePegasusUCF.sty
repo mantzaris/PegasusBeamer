@@ -70,7 +70,7 @@
 \setbeamertemplate{frametitle}
 {\vskip -0.8pt
   \leavevmode
-  \hbox{
+  \hbox{\hspace{-.2cm}
     \includegraphics[width=1cm]{UCFLOGO}
     }\hbox{\hspace{0cm}
     \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}%\raggedright\hspace*{1em}
@@ -108,8 +108,16 @@
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
-   \hspace{.2cm} \usebeamerfont{author in head/foot}\insertshorttitle$\rightarrow$\insertsection $\rightarrow$ \insertsubsection%\insertshortauthor
+  \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
+    \hspace{.2cm} \usebeamerfont{author in head/foot}\insertshorttitle
+    \ifx\insertsection\empty
+    \else
+    $\rightarrow$\insertsection
+    \fi
+    \ifx\insertsubsection\empty
+    \else
+    $\rightarrow$ \insertsubsection%\insertshortauthor
+    \fi
     %\hspace{2cm}\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}%
    \hbox{%
