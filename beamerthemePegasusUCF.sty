@@ -67,11 +67,13 @@
 
 %\addtocounter{framenumber}{-1}
 
-\setbeamertemplate{title page}{
-
-\addtocounter{framenumber}{-1}
-
- 
+\setbeamertemplate*{title page}{
+  %\author
+  %\setbeamertemplate{footline}{}
+  %\inserttitle
+  %\insertauthor
+  %\insertdate
+  \addtocounter{framenumber}{-1}
 }
 
 
@@ -114,6 +116,14 @@
 \setbeamertemplate{footline}
 {
   \leavevmode%
+  
+   \ifnum \insertpagenumber=1
+
+   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{fg=whiteSlight,bg=whiteSlight}%{author in head/foot}% %\insertshorttitle  %      <definition of footline style on page 1>
+   \end{beamercolorbox}
+
+   \else
+   %   <definition of footline style on other pages>
    
   \hbox{%
   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
@@ -135,8 +145,10 @@
   \end{beamercolorbox}%
    }
   }
- 
+  \fi
 }
+
+
 
 
 
