@@ -65,6 +65,15 @@
 %bg color
 \setbeamercolor{background canvas}{bg=whiteSlight}
 
+%\addtocounter{framenumber}{-1}
+
+\setbeamertemplate{title page}{
+
+\addtocounter{framenumber}{-1}
+
+ 
+}
+
 
 %frametitle
 \setbeamertemplate{frametitle}
@@ -105,6 +114,7 @@
 \setbeamertemplate{footline}
 {
   \leavevmode%
+   
   \hbox{%
   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
     \hspace{.2cm} \usebeamerfont{author in head/foot}\insertshorttitle
@@ -123,8 +133,9 @@
     \usebeamerfont{title in head/foot}
     \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}%
- }
-}
+   }
+  }
+ 
 }
 
 
