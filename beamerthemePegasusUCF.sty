@@ -66,21 +66,33 @@
 \setbeamercolor{background canvas}{bg=whiteSlight}
 \setbeamercolor{titlepageBG1}{fg=ucfBlack,bg=ucfGold}
 \setbeamercolor{titlepageBG2}{fg=ucfBlack,bg=ucfGoldQuarter}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+
 %\addtocounter{framenumber}{-1}
 \setbeamertemplate{title page}{
 
-  \vspace{1.2cm}
-  
-\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex]{titlepageBG1}
+  \vspace{.9cm}
+  \begin{textblock*}{9cm}(1cm,1.5cm) 
+\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1.2ex]{titlepageBG1}
   {\Large \inserttitle}\\
-  \end{beamercolorbox}
+\end{beamercolorbox}
+\end{textblock*}
 %\hspace{3cm}
-\vspace{.9cm}
-\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex]{titlepageBG2}
+\vspace{.8cm}
+
+\begin{textblock*}{5cm}(1cm,4cm) 
+\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex,wd=4cm]{titlepageBG2}
   {\large \insertauthor}\\
 \end{beamercolorbox}
-\vspace{.42cm}
+\end{textblock*}
+
+\vspace{.32cm}
+
+\begin{textblock*}{5cm}(1cm,7cm) 
 \center \includegraphics[scale=.65]{UCFLOGOh}
+\end{textblock*}
+
 %\insertauthor
   %\insertdate
 
