@@ -8,7 +8,7 @@
 %%%%%COLOR
 %golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
-\definecolor{ucfGoldHalf}{RGB}{127, 229, 131}
+\definecolor{ucfGoldHalf}{RGB}{255, 229, 131}
 \definecolor{ucfGoldQuarter}{RGB}{254, 242, 193}
 %blacks
 \definecolor{ucfBlack}{RGB}{0, 0, 0}
@@ -64,15 +64,26 @@
 %%%%%OUTER
 %bg color
 \setbeamercolor{background canvas}{bg=whiteSlight}
-
+\setbeamercolor{titlepageBG1}{fg=ucfBlack,bg=ucfGold}
+\setbeamercolor{titlepageBG2}{fg=ucfBlack,bg=ucfGoldQuarter}
 %\addtocounter{framenumber}{-1}
+\setbeamertemplate{title page}{
 
-\setbeamertemplate*{title page}{
-  %\author
-  %\setbeamertemplate{footline}{}
-  %\inserttitle
-  %\insertauthor
+  \vspace{1.2cm}
+  
+\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex]{titlepageBG1}
+  {\Large \inserttitle}\\
+  \end{beamercolorbox}
+%\hspace{3cm}
+\vspace{.9cm}
+\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex]{titlepageBG2}
+  {\large \insertauthor}\\
+\end{beamercolorbox}
+\vspace{.42cm}
+\center \includegraphics[scale=.65]{UCFLOGOh}
+%\insertauthor
   %\insertdate
+
   \addtocounter{framenumber}{-1}
 }
 
