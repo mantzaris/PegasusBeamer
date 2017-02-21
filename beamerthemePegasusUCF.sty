@@ -32,18 +32,22 @@
 %black components
 \setbeamercolor{frametitle}{fg = ucfBlack}
 \setbeamercolor{title}{fg = ucfBlack}
-\setbeamercolor{section in toc}{fg = ucfBlack}
-\setbeamercolor{section in toc shaded}{fg = ucfBlackQuarter}
 \setbeamercolor{normal text}{fg= ucfBlack}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
+%TOC
+%\setbeamercolor{section in toc}{ * \inserttocsection \par}%{fg = ucfBlack,bg = ucfBlack}
+\setbeamercolor{section number projected}{bg=ucfGold,fg=ucfBlack}
+
 
 
 %%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
 \usefonttheme{professionalfonts}
 \usefonttheme{serif} % default family is serif
-%\usepackage{fontspec}
-%\setmainfont{Liberation Serif}
+\setbeamerfont{section number projected}{series=\bfseries,size=\large}
+
+
+
 
 
 %%%%INNER
@@ -73,7 +77,7 @@
 \setbeamertemplate{title page}{
 
   \vspace{.9cm}
-  \begin{textblock*}{9cm}(1cm,1.5cm) 
+  \begin{textblock*}{10cm}(1cm,1.5cm) 
 \begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1.2ex]{titlepageBG1}
   {\Large \inserttitle}\\
 \end{beamercolorbox}
@@ -90,7 +94,7 @@
 \vspace{.32cm}
 
 \begin{textblock*}{5cm}(1cm,7cm) 
-\center \includegraphics[scale=.65]{UCFLOGOh}
+\center \includegraphics[scale=.5]{UCFLOGOh}
 \end{textblock*}
 
 %\insertauthor
@@ -120,16 +124,7 @@
   %}%
 }  
   %\vspace{-25pt}
-  %\hfill
-  %\includegraphics[width=1cm]{UCFLOGO}
-  %\hspace*{0.0cm}
-  %\vskip0pt
-  %{\color{ucfBlack}\rule{\textwidth}{0.4mm}}
 
-    %\begin{beamercolorbox}[wd=0.15\textwidth,ht=1cm]{fg=ucfBlack,bg=ucfWhite}
-     % {\tiny \insertsection }\\
-     % {\tiny   \insertsubsection}  
-    %\end{beamercolorbox}} 
 
 
 %footer
@@ -174,14 +169,9 @@
 
 
 
-
-
-
 %%%%MISC
 % We will also remove the navigation symbols, which I personally don't find very useful
 \setbeamertemplate{navigation symbols}{}
-
-
 
 
 
