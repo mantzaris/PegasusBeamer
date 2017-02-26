@@ -55,10 +55,10 @@
 \setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
 \setbeamercolor{block body}{bg = ucfBlackQuarter}
 % Alert block
-\setbeamercolor{block title alerted}{bg = ucfGoldQuarter}
+\setbeamercolor{block title alerted}{bg = ucfGold}
 \setbeamercolor{block body alerted}{bg = ucfGoldHalf}
 % Example block
-\setbeamercolor{block title example}{bg = ucfGoldHalf}
+\setbeamercolor{block title example}{bg = ucfGold}
 \setbeamercolor{block body example}{bg = ucfGoldQuarter}
 
 %Overall aesthetic of inner components
@@ -93,8 +93,70 @@
 
 \vspace{.32cm}
 
-\begin{textblock*}{5cm}(1cm,7cm) 
-\center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
+\begin{textblock*}{5cm}(1cm,7cm)
+
+  \ifnum 1 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/statistics}
+  \fi
+  \ifnum 2 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/mathematics}
+  \fi
+  \ifnum 3 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/engandcs}
+  \fi
+  \ifnum 4 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/eeandcompeng}
+  \fi
+  \ifnum 5 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/ist}
+  \fi
+  \ifnum 6 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/physics}
+  \fi
+  \ifnum 7 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/mechaerospace}
+  \fi
+  \ifnum 8 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/casl}
+  \fi
+  \ifnum 9 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/transportation}
+  \fi
+  \ifnum 10 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/chemistry}
+  \fi
+  \ifnum 11 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/biology}
+  \fi
+  \ifnum 12 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/econ}
+  \fi
+  \ifnum 13 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/sociology}
+  \fi
+  \ifnum 14 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/psychology}
+  \fi
+  \ifnum 15 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/business}
+  \fi
+  \ifnum 16 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/cos}
+  \fi
+  \ifnum 0 = \deptname
+  \center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
+  \fi
+  
+
+%  \newif\if@flagg
+ % \@iflaggtrue
+  %\center \includegraphics[scale=0.15]{stylefiles/UCFLOGOh}
+  %\else
+  %\center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
+  %\fi
+  
+%    \center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
+    
 \end{textblock*}
 
 %\insertauthor
@@ -108,23 +170,17 @@
 \setbeamertemplate{frametitle}
 {\vskip -0.8pt
   \leavevmode
-  \hbox{\hspace{-.2cm}
+  \hbox{\hspace{-.2cm}    
+   
     \includegraphics[width=1cm]{stylefiles/UCFLOGO}
     }\hbox{\hspace{0cm}
     \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}%\raggedright\hspace*{1em}
       \vspace{.13cm}\offinterlineskip\Large\insertframetitle
     \end{beamercolorbox}
   }
-  %\leavevmode  \vbox{%
-   % \leavevmode
-    %\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,wd=2cm]{fg=ucfBlack,bg=ucfWhite}
-     % {\small \insertsection  \insertsubsection}   
-    %\end{beamercolorbox}
 
-  %}%
 }  
-  %\vspace{-25pt}
-
+ 
 
 
 %footer
