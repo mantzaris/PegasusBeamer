@@ -73,13 +73,14 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{graphicx}
 
+
 %\addtocounter{framenumber}{-1}
 \setbeamertemplate{title page}{
 
   \vspace{.9cm}
   \begin{textblock*}{10cm}(1cm,1.5cm) 
 \begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1.2ex]{titlepageBG1}
-  {\Large \inserttitle}\\
+ \fontfamily{pbk}\selectfont{\Large \inserttitle}\\
 \end{beamercolorbox}
 \end{textblock*}
 %\hspace{3cm}
@@ -148,15 +149,7 @@
   \fi
   
 
-%  \newif\if@flagg
- % \@iflaggtrue
-  %\center \includegraphics[scale=0.15]{stylefiles/UCFLOGOh}
-  %\else
-  %\center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
-  %\fi
   
-%    \center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
-    
 \end{textblock*}
 
 %\insertauthor
@@ -175,7 +168,7 @@
     \includegraphics[width=1cm]{stylefiles/UCFLOGO}
     }\hbox{\hspace{0cm}
     \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}%\raggedright\hspace*{1em}
-      \vspace{.13cm}\offinterlineskip\Large\insertframetitle
+      \vspace{.13cm}\offinterlineskip\fontfamily{pbk}\selectfont\Large\insertframetitle
     \end{beamercolorbox}
   }
 
@@ -201,14 +194,14 @@
    
   \hbox{%
   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
-    \hspace{.2cm} \usebeamerfont{author in head/foot}\insertshorttitle
+    \hspace{.2cm} \usebeamerfont{author in head/foot}\fontfamily{pbk}\selectfont\insertshorttitle
     \ifx\insertsection\empty
     \else
-    $\rightarrow$\insertsection
+    $\rightarrow$\fontfamily{pbk}\selectfont\insertsection
     \fi
     \ifx\insertsubsection\empty
     \else
-    $\rightarrow$ \insertsubsection%\insertshortauthor
+    $\rightarrow$ \fontfamily{pbk}\selectfont\insertsubsection%\insertshortauthor
     \fi
     %\hspace{2cm}\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}%
