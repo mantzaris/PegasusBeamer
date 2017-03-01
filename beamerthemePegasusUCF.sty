@@ -45,7 +45,7 @@
 \usefonttheme{professionalfonts}
 \usefonttheme{serif} % default family is serif
 \setbeamerfont{section number projected}{series=\bfseries,size=\large}
-
+\setbeamerfont{normal text}{family={\fontfamily{ppl}} }
 
 
 
@@ -53,13 +53,21 @@
 %%%%INNER
 % Standard block
 \setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
+\setbeamerfont{block title}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body}{bg = ucfBlackQuarter}
+\setbeamerfont{block body}{family={\fontfamily{ptm}} }
+
 % Alert block
 \setbeamercolor{block title alerted}{bg = ucfGold}
+\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body alerted}{bg = ucfGoldHalf}
+\setbeamerfont{block body alerted}{family={\fontfamily{ptm}} }
+
 % Example block
 \setbeamercolor{block title example}{bg = ucfGold}
+\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body example}{bg = ucfGoldQuarter}
+\setbeamerfont{block body example}{family={\fontfamily{ptm}} }
 
 %Overall aesthetic of inner components
 \useinnertheme{rounded}
@@ -88,7 +96,7 @@
 
 %\begin{textblock*}{5cm}(1cm,4cm) 
 \center\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex,wd=0.6\textwidth]{titlepageBG2}
-  {\large \insertauthor}\\
+ \fontfamily{ppl}\selectfont  {\large \insertauthor}\\
 \end{beamercolorbox}
 %\end{textblock*}
 
