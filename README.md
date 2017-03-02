@@ -1,5 +1,5 @@
 # PegasusBeamer
-A beamer theme for the University Of Central Florida (UCF)
+## A beamer theme for the University Of Central Florida (UCF)
 
 1. You must download the .sty file and the *stylefiles* folder into the directory where you have your .tex latex/beamer file
 
