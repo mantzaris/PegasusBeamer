@@ -167,21 +167,30 @@
   \addtocounter{framenumber}{-1}
 }
 
-
+\setbeamercolor{title block}{fg=ucfBlack,bg=ucfGold}
 %frametitle
 \setbeamertemplate{frametitle}
-{\vskip -0.8pt
-  \leavevmode
-  \hbox{\hspace{-.2cm}    
-   
-    \includegraphics[width=1cm]{stylefiles/UCFLOGO}
-    }\hbox{\hspace{0cm}
-    \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}%\raggedright\hspace*{1em}
-      \vspace{.13cm}\offinterlineskip\fontfamily{pbk}\selectfont\Large\insertframetitle
-    \end{beamercolorbox}
-  }
-
-}  
+                  {
+                    \ifnum 90 > \deptname
+                    \vskip -0.8pt
+                    \leavevmode
+                    \hbox{\hspace{-.2cm}    
+                    
+                      \includegraphics[width=1cm]{stylefiles/UCFLOGO}
+     
+                    }\hbox{\hspace{0cm}    
+                      \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}
+                        \vspace{.13cm}\offinterlineskip\fontfamily{pbk}\selectfont\Large\insertframetitle
+                    \end{beamercolorbox}}
+                    
+                    \else
+                       
+                      \begin{beamercolorbox}[wd=.9\textwidth]{title block}                       
+                        \fontfamily{pbk}\selectfont\Large\insertframetitle
+                    \end{beamercolorbox}
+                    
+                    \fi
+                  }  
  
 
 
