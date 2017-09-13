@@ -6,6 +6,11 @@
 \usepackage{color}
 \usepackage{verbatim}
 
+%%%%?!?!?!?
+\usepackage{tcolorbox}
+%%%%?!?!?!?
+
+
 %%%%%COLOR
 %golds
 \definecolor{ucfGold}{RGB}{255, 202, 6}
@@ -69,6 +74,14 @@
 \setbeamerfont{block title example}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body example}{bg = ucfBlack}
 \setbeamerfont{block body example}{family={\fontfamily{ptm}} }
+%%%?!?!?!?
+\newenvironment{myblock}[1]
+{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfGold,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ppl},colbacktitle=ucfBlack ]}
+{\end{tcolorbox}}
+\newenvironment{myblock2}[1]
+{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfBlack,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ppl},colbacktitle=ucfGold ]}
+{\end{tcolorbox}}
+%%%?!?!?!
 
 %Overall aesthetic of inner components
 \useinnertheme{rounded}
