@@ -1,0 +1,258 @@
+    \ProvidesPackage{beamerthemePegasusUCF}[]
+    %%%%
+    %beamer theme style file created for the university of UCF (university of central Florida) by Alexander V. Mantzaris using colors and logo images that adhere to official external brand presence
+\mode<presentation>
+%%%ALEX 1inner \ 2outer \ color \ font
+\usepackage{color}
+\usepackage{verbatim}
+
+%%%%%COLOR
+%golds
+\definecolor{ucfGold}{RGB}{255, 202, 6}
+\definecolor{ucfGoldHalf}{RGB}{255, 229, 131}
+\definecolor{ucfGoldQuarter}{RGB}{254, 242, 193}
+%blacks
+\definecolor{ucfBlack}{RGB}{0, 0, 0}
+\definecolor{ucfBlackHalf}{RGB}{127, 127, 127}
+\definecolor{ucfBlackQuarter}{RGB}{191, 191, 191}
+%White
+\definecolor{whiteSlight}{RGB}{244, 244, 244}
+
+
+%gold components
+\setbeamercolor{framesubtitle}{fg=ucfBlack}
+\setbeamercolor{alerted text}{fg=ucfBlack}
+\setbeamercolor{example text}{fg=ucfBlack}
+\setbeamercolor{structure}{fg=ucfBlack}
+\setbeamercolor{item}{fg = ucfGold}
+\setbeamercolor{subitem}{fg = ucfGoldHalf}
+\setbeamercolor{subsubitem}{fg = ucfGoldQuarter}
+\setbeamercolor{description item}{fg = ucfBlack}
+\setbeamercolor{author}{fg=ucfBlack}
+\setbeamercolor{date}{fg=ucfBlack}
+%black components
+\setbeamercolor{frametitle}{fg = ucfBlack}
+\setbeamercolor{title}{fg = ucfBlack}
+\setbeamercolor{normal text}{fg= ucfBlack}
+\setbeamercolor{caption}{fg = ucfBlack}
+\setbeamercolor{caption name}{fg = ucfBlack}
+%TOC
+%\setbeamercolor{section in toc}{ * \inserttocsection \par}%{fg = ucfBlack,bg = ucfBlack}
+\setbeamercolor{section number projected}{bg=ucfGold,fg=ucfBlack}
+\setbeamerfont{section in toc}{size=\Large}
+\setbeamerfont{subsection in toc}{size=\large}
+
+
+%%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
+\usefonttheme{professionalfonts}
+\usefonttheme{serif} % default family is serif
+\setbeamerfont{section number projected}{series=\bfseries,size=\large}
+\setbeamerfont{normal text}{family={\fontfamily{ppl}} }
+
+
+
+
+%%%%INNER
+% Standard block
+\setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
+\setbeamerfont{block title}{family={\fontfamily{ppl}} }
+\setbeamercolor{block body}{bg = ucfBlackQuarter}
+\setbeamerfont{block body}{family={\fontfamily{ptm}} }
+
+% Alert block
+\setbeamercolor{block title alerted}{bg = ucfGold}
+\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
+\setbeamercolor{block body alerted}{bg = ucfGoldHalf}
+\setbeamerfont{block body alerted}{family={\fontfamily{ptm}} }
+
+% Example block
+\setbeamercolor{block title example}{bg = ucfGold}
+\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
+\setbeamercolor{block body example}{bg = ucfGoldQuarter}
+\setbeamerfont{block body example}{family={\fontfamily{ptm}} }
+
+%Overall aesthetic of inner components
+\useinnertheme{rounded}
+
+
+%%%%%OUTER
+%bg color
+\setbeamercolor{background canvas}{bg=whiteSlight}
+\setbeamercolor{titlepageBG1}{fg=ucfBlack,bg=ucfGold}
+\setbeamercolor{titlepageBG2}{fg=ucfBlack,bg=ucfGoldQuarter}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+
+
+\AtBeginSection[]
+               {
+                 \ifnum \value{framenumber}>1
+                 \begin{frame}
+                   \frametitle{current section}
+                   \huge{\tableofcontents[currentsection]}
+                 \end{frame}
+                 \else
+                 \fi
+               }
+
+%\addtocounter{framenumber}{-1}
+\setbeamertemplate{title page}{
+
+  \vspace{.9cm}
+  \begin{textblock*}{10cm}(1cm,1.5cm) 
+\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1.2ex]{titlepageBG1}
+ \fontfamily{pbk}\selectfont{\Large \inserttitle}\\
+\end{beamercolorbox}
+\end{textblock*}
+%\hspace{3cm}
+\vspace{.8cm}
+
+%\begin{textblock*}{5cm}(1cm,4cm) 
+\center\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex,wd=0.6\textwidth]{titlepageBG2}
+ \fontfamily{ppl}\selectfont  {\large \insertauthor}\\
+\end{beamercolorbox}
+%\end{textblock*}
+
+\vspace{.32cm}
+
+\begin{textblock*}{5cm}(1cm,7cm)
+
+  \ifnum 1 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/statistics}
+  \fi
+  \ifnum 2 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/mathematics}
+  \fi
+  \ifnum 3 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/engandcs}
+  \fi
+  \ifnum 4 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/eeandcompeng}
+  \fi
+  \ifnum 5 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/ist}
+  \fi
+  \ifnum 6 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/physics}
+  \fi
+  \ifnum 7 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/mechaerospace}
+  \fi
+  \ifnum 8 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/casl}
+  \fi
+  \ifnum 9 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/transportation}
+  \fi
+  \ifnum 10 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/chemistry}
+  \fi
+  \ifnum 11 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/biology}
+  \fi
+  \ifnum 12 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/econ}
+  \fi
+  \ifnum 13 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/sociology}
+  \fi
+  \ifnum 14 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/psychology}
+  \fi
+  \ifnum 15 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/business}
+  \fi
+  \ifnum 16 = \deptname
+  \center \includegraphics[scale=.6]{stylefiles/depts/cos}
+  \fi
+  \ifnum 0 = \deptname
+  \center \includegraphics[scale=.5]{stylefiles/UCFLOGOh}
+  \fi
+  
+
+  
+\end{textblock*}
+
+%\insertauthor
+  %\insertdate
+
+  \addtocounter{framenumber}{-1}
+}
+
+\setbeamercolor{title block}{fg=ucfBlack,bg=ucfGold}
+%frametitle
+\setbeamertemplate{frametitle}
+                  {
+                    \ifnum 90 > \deptname
+                    \vskip -0.8pt
+                    \leavevmode
+                    \hbox{\hspace{-.2cm}    
+                    
+                      \includegraphics[width=1cm]{stylefiles/UCFLOGO}
+     
+                    }\hbox{\hspace{0cm}    
+                      \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}
+                        \vspace{.13cm}\offinterlineskip\fontfamily{pbk}\selectfont\Large\insertframetitle
+                    \end{beamercolorbox}}
+                    
+                    \else
+                       
+                      \begin{beamercolorbox}[wd=.9\textwidth]{title block}                       
+                        \fontfamily{pbk}\selectfont\Large\insertframetitle
+                    \end{beamercolorbox}
+                    
+                    \fi
+                  }  
+ 
+
+
+%footer
+\setbeamercolor{author in head/foot}{bg=ucfBlackQuarter}
+\setbeamercolor{title in head/foot}{bg=ucfBlackQuarter}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  
+   \ifnum \insertpagenumber=1
+
+   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{fg=whiteSlight,bg=whiteSlight}%{author in head/foot}% %\insertshorttitle  %      <definition of footline style on page 1>
+   \end{beamercolorbox}
+
+   \else
+   %   <definition of footline style on other pages>
+   
+  \hbox{%
+  \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{author in head/foot}%
+    \hspace{.2cm} \usebeamerfont{author in head/foot}\fontfamily{pbk}\selectfont\insertshorttitle
+    \ifx\insertsection\empty
+    \else
+    $\rightarrow$\fontfamily{pbk}\selectfont\insertsection
+    \fi
+    \ifx\insertsubsection\empty
+    \else
+    $\rightarrow$ \fontfamily{pbk}\selectfont\insertsubsection%\insertshortauthor
+    \fi
+    %\hspace{2cm}\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}%
+   \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}%
+   }
+  }
+  \fi
+}
+
+
+
+
+%%%%MISC
+% We will also remove the navigation symbols, which I personally don't find very useful
+\setbeamertemplate{navigation symbols}{}
+
+
+
+%%%%%END
+\mode<all>
