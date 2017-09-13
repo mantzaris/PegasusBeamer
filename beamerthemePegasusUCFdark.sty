@@ -18,7 +18,6 @@
 %White
 \definecolor{whiteSlight}{RGB}{244, 244, 244}
 
-
 %gold components
 \setbeamercolor{framesubtitle}{fg=ucfBlack}
 \setbeamercolor{alerted text}{fg=ucfBlack}
@@ -31,9 +30,9 @@
 \setbeamercolor{author}{fg=ucfBlack}
 \setbeamercolor{date}{fg=ucfBlack}
 %black components
-\setbeamercolor{frametitle}{fg = ucfBlack}
+\setbeamercolor{frametitle}{fg = ucfGold}
 \setbeamercolor{title}{fg = ucfBlack}
-\setbeamercolor{normal text}{fg= ucfBlack}
+\setbeamercolor{normal text}{fg= ucfGoldHalf}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
 %TOC
@@ -77,7 +76,7 @@
 
 %%%%%OUTER
 %bg color
-\setbeamercolor{background canvas}{bg=whiteSlight}
+\setbeamercolor{background canvas}{bg=ucfBlack}
 \setbeamercolor{titlepageBG1}{fg=ucfBlack,bg=ucfGold}
 \setbeamercolor{titlepageBG2}{fg=ucfBlack,bg=ucfGoldQuarter}
 \usepackage[absolute,overlay]{textpos}
@@ -216,7 +215,7 @@
   
    \ifnum \insertpagenumber=1
 
-   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{fg=whiteSlight,bg=whiteSlight}%{author in head/foot}% %\insertshorttitle  %      <definition of footline style on page 1>
+   \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1ex]{fg=ucfBlack,bg=ucfBlack}%{author in head/foot}% %\insertshorttitle  %      <definition of footline style on page 1>
    \end{beamercolorbox}
 
    \else
