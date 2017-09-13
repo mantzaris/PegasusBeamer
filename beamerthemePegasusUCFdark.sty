@@ -40,13 +40,13 @@
 \setbeamercolor{section number projected}{bg=ucfGold,fg=ucfBlack}
 \setbeamerfont{section in toc}{size=\Large}
 \setbeamerfont{subsection in toc}{size=\large}
+\setbeamerfont{section number projected}{series=\bfseries,size=\large}
+\setbeamerfont{normal text}{family={\fontfamily{ppl}} }
 
 
 %%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
 \usefonttheme{professionalfonts}
 \usefonttheme{serif} % default family is serif
-\setbeamerfont{section number projected}{series=\bfseries,size=\large}
-\setbeamerfont{normal text}{family={\fontfamily{ppl}} }
 
 
 
@@ -55,7 +55,7 @@
 % Standard block
 \setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
 \setbeamerfont{block title}{family={\fontfamily{ppl}} }
-\setbeamercolor{block body}{bg = ucfBlackQuarter}
+\setbeamercolor{block body}{bg = ucfBlackHalf}
 \setbeamerfont{block body}{family={\fontfamily{ptm}} }
 
 % Alert block
@@ -63,11 +63,11 @@
 \setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body alerted}{bg = ucfGoldHalf}
 \setbeamerfont{block body alerted}{family={\fontfamily{ptm}} }
-
+\setbeamercolor{block body alerted}{fg=ucfBlack}
 % Example block
 \setbeamercolor{block title example}{bg = ucfGold}
-\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
-\setbeamercolor{block body example}{bg = ucfGoldQuarter}
+\setbeamerfont{block title example}{family={\fontfamily{ppl}} }
+\setbeamercolor{block body example}{bg = ucfBlack}
 \setbeamerfont{block body example}{family={\fontfamily{ptm}} }
 
 %Overall aesthetic of inner components
@@ -99,7 +99,7 @@
 
   \vspace{.9cm}
   \begin{textblock*}{10cm}(1cm,1.5cm) 
-\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1.2ex]{titlepageBG1}
+\begin{beamercolorbox}[center,shadow=false,rounded=true,sep=1.2ex]{titlepageBG1}
  \fontfamily{pbk}\selectfont{\Large \inserttitle}\\
 \end{beamercolorbox}
 \end{textblock*}
@@ -107,7 +107,7 @@
 \vspace{.8cm}
 
 %\begin{textblock*}{5cm}(1cm,4cm) 
-\center\begin{beamercolorbox}[center,shadow=true,rounded=true,sep=1ex,wd=0.6\textwidth]{titlepageBG2}
+\center\begin{beamercolorbox}[center,shadow=false,rounded=true,sep=1ex,wd=0.6\textwidth]{titlepageBG2}
  \fontfamily{ppl}\selectfont  {\large \insertauthor}\\
 \end{beamercolorbox}
 %\end{textblock*}
