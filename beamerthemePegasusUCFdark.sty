@@ -5,7 +5,7 @@
 %%%ALEX 1inner \ 2outer \ color \ font
 \usepackage{color}
 \usepackage{verbatim}
-
+\usepackage{graphicx}
 %%%%?!?!?!?
 \usepackage{tcolorbox}
 \usepackage{arev}
@@ -36,7 +36,7 @@
 \setbeamercolor{subitem}{fg = ucfGoldHalf}
 \setbeamercolor{subsubitem}{fg = ucfGoldQuarter}
 \setbeamercolor{description item}{fg = ucfBlack}
-\setbeamercolor{author}{fg=ucfBlack}
+\setbeamercolor{author}{fg=ucfGold}
 \setbeamercolor{date}{fg=ucfBlack}
 %black components
 \setbeamercolor{frametitle}{fg = ucfGold}
@@ -58,13 +58,20 @@
 
 \setbeamerfont{frametitle}{ family={\fontfamily{ppl}} }
 \setbeamertemplate{section in toc shaded}[default][20]
-\setbeamertemplate{items}[circle] 
+
 \setbeamertemplate{sections in toc}[circle]
 %%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
 \usefonttheme{professionalfonts}
 \usefonttheme{serif} % default family is serif
 
 
+\useinnertheme{rounded}
+\setbeamertemplate{items}[circle] 
+\setbeamercolor{itemize item}{fg=ucfGold,bg=ucfGold}
+\setbeamercolor{items}{fg=ucfGold,bg=ucfGold}
+\setbeamertemplate{itemize item}{\normalsize$\bullet$} %[circle]
+%\setbeamertemplate{itemize item}[rounded][shadow=false]
+%\setbeamertemplate{itemize item}{\color{red}$\blacksquare$}
 
 
 %%%%INNER
@@ -95,7 +102,7 @@
 %%%?!?!?!
 
 %Overall aesthetic of inner components
-\useinnertheme{rounded}
+
 
 
 %%%%%OUTER
@@ -245,8 +252,8 @@
 
 
 %footer
-\setbeamercolor{author in head/foot}{bg=ucfBlackQuarter}
-\setbeamercolor{title in head/foot}{bg=ucfBlackQuarter}
+\setbeamercolor{author in head/foot}{fg=ucfGold,bg=ucfBlack}
+\setbeamercolor{title in head/foot}{fg=ucfGold,bg=ucfBlack}
 
 \setbeamertemplate{footline}
 {
