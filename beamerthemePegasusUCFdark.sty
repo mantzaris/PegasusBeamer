@@ -8,6 +8,10 @@
 
 %%%%?!?!?!?
 \usepackage{tcolorbox}
+\usepackage{arev}
+\usepackage[light]{iwona}
+\usepackage[T1]{fontenc}
+\usepackage[black]{merriweather}
 %%%%?!?!?!?
 
 
@@ -37,7 +41,7 @@
 %black components
 \setbeamercolor{frametitle}{fg = ucfGold}
 \setbeamercolor{title}{fg = ucfBlack}
-\setbeamercolor{normal text}{fg= ucfGoldHalf}
+\setbeamercolor{normal text}{fg= ucfGoldQuarter}
 \setbeamercolor{caption}{fg = ucfBlack}
 \setbeamercolor{caption name}{fg = ucfBlack}
 %TOC
@@ -46,8 +50,9 @@
 \setbeamerfont{section in toc}{size=\Large}
 \setbeamerfont{subsection in toc}{size=\large}
 \setbeamerfont{section number projected}{series=\bfseries,size=\large}
-\setbeamerfont{normal text}{family={\fontfamily{ppl}} }
+\setbeamerfont{normal text}{family={\fontfamily{arev}} }
 
+\setbeamerfont{frametitle}{ family={\fontfamily{ppl}} }
 
 %%%%fonts (UCF have serif family; main fonts are GOTHAM(direct clear) and CHRONICLE(compact elegant), secondary are KNOCKOUT(compact impact) and ARCHER (casual))
 \usefonttheme{professionalfonts}
@@ -59,27 +64,27 @@
 %%%%INNER
 % Standard block
 \setbeamercolor{block title}{fg = ucfBlack, bg = ucfGold}
-\setbeamerfont{block title}{family={\fontfamily{ppl}} }
-\setbeamercolor{block body}{bg = ucfBlackHalf}
-\setbeamerfont{block body}{family={\fontfamily{ptm}} }
+\setbeamerfont{block title}{family={\bfseries\fontfamily{ppl}} }
+\setbeamercolor{block body}{fg = ucfBlack,bg = ucfBlackQuarter}
+\setbeamerfont{block body}{family={\fontfamily{ppl}} }
 
 % Alert block
 \setbeamercolor{block title alerted}{bg = ucfGold}
-\setbeamerfont{block title alerted}{family={\fontfamily{ppl}} }
+\setbeamerfont{block title alerted}{family={\bfseries\fontfamily{ppl}} }
 \setbeamercolor{block body alerted}{bg = ucfGoldHalf}
-\setbeamerfont{block body alerted}{family={\fontfamily{ptm}} }
+\setbeamerfont{block body alerted}{family={\fontfamily{ppl}} }
 \setbeamercolor{block body alerted}{fg=ucfBlack}
 % Example block
 \setbeamercolor{block title example}{bg = ucfGold}
-\setbeamerfont{block title example}{family={\fontfamily{ppl}} }
-\setbeamercolor{block body example}{bg = ucfBlack}
-\setbeamerfont{block body example}{family={\fontfamily{ptm}} }
+\setbeamerfont{block title example}{family={\bfseries\fontfamily{iwona}} }
+\setbeamercolor{block body example}{fg=ucfGoldHalf, bg = ucfBlackHalf}
+\setbeamerfont{block body example}{family={\bfseries\fontfamily{iwona}} }
 %%%?!?!?!?
-\newenvironment{myblock}[1]
-{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfGold,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ppl},colbacktitle=ucfBlack ]}
+\newenvironment{newblock1}[1]
+{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfGold,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ptm},colbacktitle=ucfBlack,fonttitle=\bfseries\fontfamily{ptm} ]}
 {\end{tcolorbox}}
-\newenvironment{myblock2}[1]
-{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfBlack,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ppl},colbacktitle=ucfGold ]}
+\newenvironment{newblock2}[1]
+{\begin{tcolorbox}[title=#1,fonttitle=\fontfamily{ppl},title filled=false,coltitle=ucfBlack,colback=ucfBlack,colframe=ucfGold,coltext= ucfGold,fonttitle=\fontfamily{ptm},colbacktitle=ucfGold,fonttitle=\bfseries\fontfamily{ptm} ]}
 {\end{tcolorbox}}
 %%%?!?!?!
 
@@ -200,16 +205,16 @@
                     \leavevmode
                     \hbox{\hspace{-.2cm}    
                     
-                      \includegraphics[width=1cm]{stylefiles/UCFLOGO}
-     
+                      \includegraphics[width=1.1cm]{stylefiles/UCFLOGO}
+     %MAKE BOLD FRAMETITLE
                     }\hbox{\hspace{0cm}    
-                      \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{frametitle}
+                   \bfseries   \begin{beamercolorbox}[ht=1.1ex,dp=1ex,wd=.82\textwidth]{ frametitle}
                         \vspace{.13cm}\offinterlineskip\fontfamily{pbk}\selectfont\Large\insertframetitle
                     \end{beamercolorbox}}
                     
                     \else
-                       
-                      \begin{beamercolorbox}[wd=.9\textwidth]{title block}                       
+                        %MAKE BOLD FRAMETITLE
+                     \bfseries  \begin{beamercolorbox}[wd=.9\textwidth]{title block}                       
                         \fontfamily{pbk}\selectfont\Large\insertframetitle
                     \end{beamercolorbox}
                     
