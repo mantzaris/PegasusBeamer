@@ -3,7 +3,7 @@
 
 1. You must download the .sty file and the *stylefiles* folder into the directory where you have your .tex latex/beamer file
 
-2. At the start of the file, after defining the document class at the top: **\documentclass{beamer}**, put the line **\usetheme{PegasusUCF}**
+2. At the start of the file, after defining the document class at the top: **\documentclass{beamer}**, put the line **\usetheme{PegasusUCF}** (the **Dark** version is invoked by using **\usetheme{PegasusUCFdark}**
 
 3. Fill in the title and short title  by changing the text in the square and curly brackets for the *\title* tag: **\title[short talk title]{title of talk}**
 
@@ -52,3 +52,5 @@
 %%%%%%%%%%%%%%%%
 \begin{document}
 ```
+
+*note that in the 'dark' version there are two new styles of blocks to choose from {newblock1} and {newblock2} which you can see from the exampleDark.pdf on how they look on the last page where they are displayed'
