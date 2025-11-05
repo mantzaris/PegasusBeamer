@@ -25,8 +25,8 @@
 \author{Alexander V. Mantzaris}
 %>>>>UNCOMMENT 1 FOR YOUR DEPTARTMENT
 \newcommand{\deptname}{0}
-%\newcommand{\deptname}{1}%STATISTICS
-%\newcommand{\deptname}{2}%MATHEMATICS
+%\newcommand{\deptname}{1}%SCHOOL OF DATA, MATHEMATICAL, AND STATISTICAL SCIENCES
+%\newcommand{\deptname}{2}%INFORMATION TECHNOLOGY
 %\newcommand{\deptname}{3}%ENGINEERING AND COMPUTER SCIENCE
 %\newcommand{\deptname}{4}%ELECTRICAL ENGINEERING AND COMPUTER ENGINEERING
 %\newcommand{\deptname}{5}%IST INSTITUTE FOR SIMULATION AND TRAINING
